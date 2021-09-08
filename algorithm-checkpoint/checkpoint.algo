@@ -1,0 +1,43 @@
+ALGORITHM checkpoint
+VAR
+    
+    c: CHAR;
+    i: INTEGER:=0;
+    len: INTEGER:=0;
+    words: INTEGER:=0;
+    vowels: INTEGER:=0;
+
+BEGIN
+    
+    WHILE (c<>".") DO
+        Write("give a caracter");
+        Read(c));
+
+        FOR i FROM 0 TO c.length STEP 1  DO
+    
+            len:=len + 1;
+  
+        END_FOR
+
+        FOR i FROM 0 TO c.length STEP 1  DO
+            IF (c[i]=" ") THEN
+
+                words:= words + 1;
+            END_IF
+        END_FOR
+
+        FOR i FROM 0 TO c.length STEP 1  DO
+            IF (c[i]=["a","e","i","o","u","y"]) THEN
+            
+                vowels:=vowels + 1;
+            END_IF
+        END_FOR
+
+    END_WHILE
+        
+    
+    Write(len);
+    Write(words);
+    Write(vowels);
+
+END
